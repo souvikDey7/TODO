@@ -21,8 +21,4 @@ export class ServiceService {
      //this.http.post("/h",user).subscribe(data=>data=this.data);
      return this.data;
   }
-  back()
-  {
-   (new AppComponent()).back();
-  }
 }
