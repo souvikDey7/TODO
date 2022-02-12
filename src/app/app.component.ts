@@ -9,9 +9,12 @@ export class AppComponent {
   title = 'ToDo';
   isButtonVisible = true;
   login=false;
-  signup=false
+  signup=false;
   back()
   {
+      this.isButtonVisible = true;
+  this.login=false;
+  this.signup=false;
     window.location.reload();
   }
 }
