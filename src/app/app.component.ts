@@ -10,11 +10,4 @@ export class AppComponent {
   isButtonVisible = true;
   login=false;
   signup=false;
-  back()
-  {
-      this.isButtonVisible = true;
-  this.login=false;
-  this.signup=false;
-    window.location.reload();
-  }
 }
