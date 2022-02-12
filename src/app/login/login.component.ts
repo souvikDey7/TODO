@@ -33,8 +33,4 @@ export class LoginComponent implements OnInit {
     else
     this.status=this.a.send(this.user);
   }
-  back()
-  {
-    this.a.back();
-  }
 }
