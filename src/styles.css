@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+#mainB{
+  background-image:url("PngItem.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+}

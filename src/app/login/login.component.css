@@ -1,0 +1,10 @@
+@media (min-width: 500px) { 
+    #margin-end{
+      margin-bottom:30%;
+      }
+  }
+@media (max-width:500px) { 
+    #margin-end{
+      margin-bottom:35%;
+      }
+  }

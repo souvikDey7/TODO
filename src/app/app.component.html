@@ -1,0 +1,26 @@
+<div id="margin-end"class="container-fluid fixed-bottom ">
+  <div *ngIf="this.login">
+  <figure>
+    <blockquote id="l1" class="blockquote g-0 text-left">Welcome Back... <br>
+     </blockquote> 
+   </figure>
+  </div>
+  <div *ngIf="this.signup">
+    <figure>
+      <blockquote id="l1" class="blockquote g-0 text-left">Create Account
+       </blockquote> 
+     </figure>
+  </div>
+  <div *ngIf="this.isButtonVisible"> 
+    <figure>
+       <blockquote id="TODO" class="blockquote g-0 text-left">TODO  <br>
+        <span id="t1" class="g-0 align-top text-end">next to do....</span>
+        </blockquote> 
+      </figure>
+      <a  (click)="this.login=true; this.isButtonVisible=false;" routerLink="old/login" class="d-block btn shadow p-2 btn-outline-success bg-body rounded  btn-light text-dark text-center">Log in</a><br>
+      <a  (click)="this.signup=true;this.isButtonVisible=false;" routerLink="new/signup" class="d-block btn shadow p-2 btn-outline-success btn-light text-dark text-center rounded">Sign up</a>
+  </div>
+  <div *ngIf="!this.isButtonVisible">
+  <router-outlet></router-outlet>
+  </div>
+</div>
