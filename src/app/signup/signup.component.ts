@@ -36,8 +36,4 @@ export class SignupComponent implements OnInit {
     else
     this.status=this.a.get(this.user);
   }
-  back()
-  {
-    this.a.back();
-  }
 }
