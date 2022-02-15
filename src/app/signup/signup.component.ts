@@ -27,6 +27,7 @@ export class SignupComponent implements OnInit {
     }
     else
     {
+   this.user.pop();
       this.a.get(this.user.value).subscribe(d=>this.status=d);
       console.log(this.status);
       if(this.status==0)
