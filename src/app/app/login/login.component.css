@@ -1,0 +1,19 @@
+@media (min-width: 500px) { 
+    #margin-end{
+      margin-bottom:30%;
+      }
+      #l1 {
+        font-size: 1.5rem;
+  }
+  }
+@media (max-width:500px) { 
+    #margin-end{
+      margin-bottom:35%;
+      }
+      #l1 {
+        font-size: 2.5rem;
+      }
+  }
+  #li {
+    font-family: Cursive;
+}
