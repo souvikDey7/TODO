@@ -1,4 +1,9 @@
-<div id="margin-end"class="container-fluid fixed-bottom ">
+<div  id="margin-end"class="container-fluid fixed-bottom ">
+  <div *ngIf="this.show==0">
+     <figure>
+    <blockquote id="l1" class="blockquote g-0 text-left">Create Account
+     </blockquote> 
+   </figure>
   <form [formGroup]="user" (ngSubmit)="get()" ngNativeValidate>
       <span class="input-group flex-nowrap">
           <span class="input-group-text" id="addon-wrapping">
@@ -33,8 +38,21 @@
           <button class="btn btn-primary container-fluid shadow-sm bg-body rounded" type="submit">Sign up</button>
       </span>
   </form>
-  <hr text="or"> 
+  <hr> 
   <div class="input-group flex-nowrap">
     <a href=#  class="btn btn-primary container-fluid shadow-sm bg-body rounded" >Back </a>
   </div>
   </div>
+  </div>
+  <div *ngIf="this.show==1">
+    <figure>
+      <blockquote id="l1" class="blockquote g-0 text-left">Please Log-in again <br>
+        <span id="Todo" class="g-0 align-top text-end text-danger">{{dis}}</span>
+       </blockquote> 
+     </figure>
+     <br>
+     <div class="input-group flex-nowrap">
+      <a href=#  class="btn btn-primary container-fluid shadow-sm bg-body rounded" >Login</a>
+    </div>
+  </div>
+  

@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginModuleRoutingModule } from './login-module-routing.module';
-import { ServiceService } from '../service.service';
+import { ServiceService } from 'src/app/service.service';
+import { BodyMComponent } from '../body-m/body-m.component';
+
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent,BodyMComponent ],
   imports: [
     CommonModule,
     ReactiveFormsModule,LoginModuleRoutingModule
   ],
-  providers: [ServiceService],
+  providers: [ServiceService]
 })
 export class LoginModuleModule { 
 }

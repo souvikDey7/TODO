@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   }
   dis="";
   status:any;
+  show=0;
+  a1:any;
   send()
   {
     this.a.send(this.user.value).subscribe(d=>this.status=d);
@@ -32,6 +34,13 @@ export class LoginComponent implements OnInit {
       this.dis="password is wrong"
     }
     else if(this.status==1)
+    {
     this.dis="Successfully login";
+    this.a1=this.user.controls["username"].value;
+    this.show=1;
+    }
+    else{
+      this.dis="sending...";
+    }
   }
 }

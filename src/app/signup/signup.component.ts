@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule } from '@angular/forms';
-import { ServiceService } from '../service.service';
+import { ServiceService } from 'src/app/service.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -19,6 +19,7 @@ export class SignupComponent implements OnInit {
   }
   status:any;
   dis="";
+  show=0;
   get()
   {
     if(this.user.controls["password"].value!=this.user.controls["Rpassword"].value)
@@ -28,12 +29,12 @@ export class SignupComponent implements OnInit {
     else
     {
       this.a.get(this.user.value).subscribe(d=>this.status=d);
-      console.log(this.status);
       if(this.status==0)
       this.dis="User already exist";
-      else if(this.status==1)
-      this.dis="successfully created";
-      else{
+      else if(this.status==1){
+      this.dis="Account successfully created";
+      this.show=1;
+      }else{
         this.dis="sending...";
       }
     }

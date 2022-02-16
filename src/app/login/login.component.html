@@ -1,4 +1,9 @@
 <div id="margin-end"class="container-fluid fixed-bottom ">
+<div *ngIf="this.show==0">
+        <figure>
+          <blockquote id="l1" class="blockquote g-0 text-left">Welcome Back... <br>
+           </blockquote> 
+         </figure>
 <form [formGroup]="user" (ngSubmit)="send()" ngNativeValidate>
     <span class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">
@@ -29,3 +34,8 @@
         <a href=#  class="btn btn-primary container-fluid shadow-sm bg-body rounded" >Back </a>
 </div>
 </div>
+</div>
+<div *ngIf="this.show==1">
+  <app-body-m [b]="a1"></app-body-m>
+ </div>
+

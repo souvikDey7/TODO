@@ -1,0 +1,33 @@
+<div  id="margin-end"class="container-fluid fixed-bottom ">
+<form [formGroup]="bodyM" (ngSubmit)="send()">
+  <a href=#  class="btn btn-dark shadow-sm bg-body rounded justify-content-end" >Log-Out</a>
+  <textarea class="form-control shadow bg-body rounded" placeholder="write here.." id="floatingTextarea2" style="height: 100px" formControlName="text"></textarea>
+    <br>
+  <div class="input-group flex-nowrap">
+      <input class="btn btn-primary container-fluid shadow-sm bg-body rounded" type="submit" value="save"/>
+  </div>
+</form>
+<span id="l1" class="g-0 align-top text-end text-success">{{dis}}</span>
+<hr>
+<span class="g-0 align-top text-end display-6">Recent List</span>
+<br>
+ <table class="table table-hover">
+          <div *ngFor="let i of file;index as j">
+            <tr class="shadow-sm bg-body rounded" *ngIf="0==j" >
+              <th scope="col">#</th>
+              <th scope="col">Task</th>
+              <th scope="col">..</th>
+              <th scope="col">..</th>
+            </tr>  
+            <tr *ngIf="4>j">
+                      <th scope="row" >{{j+1}}</th>
+                      <td class="align-center text-center col-2 text-truncate">{{i.text}}</td>
+                      <td class="align-center"><button class="btn btn-success" (click)="upadte(i)">update</button></td>
+                      <td class="align-center"><button class="btn btn-danger" (click)="delete(i.id)">delete</button></td>
+            </tr>
+            </div>
+          </table>
+<span id="l1" class="g-0 align-top text-end text-danger">{{end}} </span>
+<br>
+<br>
+</div>

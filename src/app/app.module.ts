@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { RouteRoutingModuleMain} from './route-routing.module';
 import { ServiceService } from './service.service';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +13,7 @@ import { ServiceService } from './service.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouteRoutingModuleMain,
+    RouteRoutingModuleMain,CommonModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

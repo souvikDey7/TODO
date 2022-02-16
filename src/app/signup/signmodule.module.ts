@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SignmoduleRoutingModule } from './signmodule-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import {SignupComponent} from './signup.component'
-
+import {SignupComponent} from './signup.component';
 @NgModule({
   declarations: [SignupComponent],
   imports: [
