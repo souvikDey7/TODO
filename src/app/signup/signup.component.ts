@@ -9,7 +9,7 @@ import { ServiceService } from '../service.service';
 export class SignupComponent implements OnInit {
 
   constructor(private a:ServiceService) { }
-  client=new FormGroup(    {
+  user=new FormGroup(    {
     username:new FormControl(),
     password:new FormControl(),
     Rpassword:new FormControl()
@@ -21,13 +21,13 @@ export class SignupComponent implements OnInit {
   dis="";
   get()
   {
-    if(this.client.controls["password"].value!=this.client.controls["Rpassword"].value)
+    if(this.user.controls["password"].value!=this.user.controls["Rpassword"].value)
     {
       this.dis="Re-entered password is wrong";
     }
     else
     {
-      this.a.get(this.client.value).subscribe(d=>this.status=d);
+      this.a.get(this.user.value).subscribe(d=>this.status=d);
       console.log(this.status);
       if(this.status==0)
       this.dis="User already exist";

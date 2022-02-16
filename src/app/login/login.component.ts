@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     console.log(this.status);
     if(this.status==0)
     {
-      this.dis="username doesn't exist"
+      this.dis="username doesn't exsit"
     }
     else if(this.status==2)
     {

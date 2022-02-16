@@ -9,5 +9,5 @@ export class AppComponent {
   title = 'ToDo';
   isButtonVisible = true;
   login=false;
-  signup=false;
+  signup=false
 }

@@ -9,12 +9,12 @@ export class ServiceService {
 
   constructor(private http:HttpClient) { }
   data:any;
-  send(client:any)
+  send(user:any)
   {
-    return this.http.post("https://todobackend11.herokuapp.com/get",client);
+    return this.http.post("https://todobackend11.herokuapp.com/get",user);
   }
-  get(client:any)
+  get(user:any)
   {
-   return this.http.post("https://todobackend11.herokuapp.com/sign",client);
+   return this.http.post("https://todobackend11.herokuapp.com/sign",user);
   }
 }
