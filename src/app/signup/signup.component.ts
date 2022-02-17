@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
       this.dis="Account successfully created";
       this.show=1;
       }else{
-        this.dis="sending...";
+        this.dis="sending... click again";
       }
     }
   }
