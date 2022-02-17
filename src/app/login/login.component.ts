@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     this.show=1;
     }
     else{
-      this.dis="sending...";
+      this.dis="sending....click again";
     }
   }
 }
